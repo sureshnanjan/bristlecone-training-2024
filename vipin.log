@@ -1,0 +1,30 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240221161133
+Username: CORPBRISTLECONE\Vipin.Jaiswal
+RunAs User: CORPBRISTLECONE\Vipin.Jaiswal
+Configuration Name: 
+Machine: BLR-995B6Q3 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 5580
+PSVersion: 5.1.19041.3930
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.3930
+BuildVersion: 10.0.19041.3930
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is vipin.log
+PS C:\Users\vipin.jaiswal> git clone https://github.com/sureshnanjan/bristlecone-training-2024.git
+fatal: destination path 'bristlecone-training-2024' already exists and is not an empty directory.
+PS C:\Users\vipin.jaiswal> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\vipin.jaiswal> git checkout -b vipin-branch
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\vipin.jaiswal> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240221161500
+**********************
