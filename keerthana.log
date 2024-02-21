@@ -1,0 +1,43 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240221160737
+Username: CORPBRISTLECONE\Keerthana.Mv
+RunAs User: CORPBRISTLECONE\Keerthana.Mv
+Configuration Name: 
+Machine: BLR-HDRKY33 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 20888
+PSVersion: 5.1.19041.4046
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4046
+BuildVersion: 10.0.19041.4046
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is keerthana.log
+PS C:\BristleConeTraining> git clone https://github.com/sureshnanjan/bristlecone-training-2024.git
+Cloning into 'bristlecone-training-2024'...
+remote: Enumerating objects: 37, done.
+remote: Counting objects: 100% (37/37), done.
+remote: Compressing objects: 100% (24/24), done.
+remote: Total 37 (delta 11), reused 35 (delta 9), pack-reused 0
+Receiving objects: 100% (37/37), 7.41 MiB | 6.10 MiB/s, done.
+Resolving deltas: 100% (11/11), done.
+PS C:\BristleConeTraining> cd .\bristlecone-training-2024\
+PS C:\BristleConeTraining\bristlecone-training-2024> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\BristleConeTraining\bristlecone-training-2024> git checkout -b keerthana-branch
+Switched to a new branch 'keerthana-branch'
+PS C:\BristleConeTraining\bristlecone-training-2024> git status
+On branch keerthana-branch
+nothing to commit, working tree clean
+PS C:\BristleConeTraining\bristlecone-training-2024> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240221161045
+**********************
