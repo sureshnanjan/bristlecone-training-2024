@@ -1,0 +1,44 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240221170452
+Username: BRISTLECONE\Mamun.Debnath
+RunAs User: BRISTLECONE\Mamun.Debnath
+Configuration Name: 
+Machine: BLR-653TXD3 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 15400
+PSVersion: 5.1.19041.4046
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4046
+BuildVersion: 10.0.19041.4046
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is databaseActivity_mamun.log
+PS C:\Users\Mamun.Debnath\OneDrive - Mahindra & Mahindra Ltd.-55241918-Bristlecone India Pvt Ltd\Documents\BristleconeTraining\bristlecone-training-2024> cd .\dbms\softwares\
+PS C:\Users\Mamun.Debnath\OneDrive - Mahindra & Mahindra Ltd.-55241918-Bristlecone India Pvt Ltd\Documents\BristleconeTraining\bristlecone-training-2024\dbms\softwares> .\sqlite3.exe
+SQLite version 3.45.1 2024-01-30 16:01:20 (UTF-16 console I/O)
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .open chinook.db
+sqlite> .tables '%es'
+employees    genres       invoices     media_types
+sqlite> .schema genres
+CREATE TABLE IF NOT EXISTS "genres"
+(
+    [GenreId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    [Name] NVARCHAR(120)
+);
+sqlite> exit
+   ...> stop-transcript
+   ...> Program interrupted.
+PS C:\Users\Mamun.Debnath\OneDrive - Mahindra & Mahindra Ltd.-55241918-Bristlecone India Pvt Ltd\Documents\BristleconeTraining\bristlecone-training-2024\dbms\softwares> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\Users\Mamun.Debnath\OneDrive - Mahindra & Mahindra Ltd.-55241918-Bristlecone India Pvt Ltd\Documents\BristleconeTraining\bristlecone-training-2024\dbms\softwares> stop-transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240221172006
+**********************
