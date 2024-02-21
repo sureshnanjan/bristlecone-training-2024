@@ -1,0 +1,46 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240221150358
+Username: BRISTLECONE\Mamun.Debnath
+RunAs User: BRISTLECONE\Mamun.Debnath
+Configuration Name: 
+Machine: BLR-653TXD3 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 15400
+PSVersion: 5.1.19041.4046
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4046
+BuildVersion: 10.0.19041.4046
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is mamun.log
+PS C:\Users\Mamun.Debnath\OneDrive - Mahindra & Mahindra Ltd.-55241918-Bristlecone India Pvt Ltd\Documents\BristleconeTraining> git clone https://github.com/sureshnanjan/bristlecone-training-2024.git
+Cloning into 'bristlecone-training-2024'...
+remote: Enumerating objects: 17, done.
+remote: Counting objects: 100% (17/17), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 17 (delta 3), reused 17 (delta 3), pack-reused 0
+Unpacking objects: 100% (17/17), done.
+PS C:\Users\Mamun.Debnath\OneDrive - Mahindra & Mahindra Ltd.-55241918-Bristlecone India Pvt Ltd\Documents\BristleconeTraining> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\Mamun.Debnath\OneDrive - Mahindra & Mahindra Ltd.-55241918-Bristlecone India Pvt Ltd\Documents\BristleconeTraining> git checkout -b mamun_branch
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\Mamun.Debnath\OneDrive - Mahindra & Mahindra Ltd.-55241918-Bristlecone India Pvt Ltd\Documents\BristleconeTraining> cd .\bristlecone-training-2024\
+PS C:\Users\Mamun.Debnath\OneDrive - Mahindra & Mahindra Ltd.-55241918-Bristlecone India Pvt Ltd\Documents\BristleconeTraining\bristlecone-training-2024> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\Mamun.Debnath\OneDrive - Mahindra & Mahindra Ltd.-55241918-Bristlecone India Pvt Ltd\Documents\BristleconeTraining\bristlecone-training-2024> git checkout -b mamun-branch
+Switched to a new branch 'mamun-branch'
+PS C:\Users\Mamun.Debnath\OneDrive - Mahindra & Mahindra Ltd.-55241918-Bristlecone India Pvt Ltd\Documents\BristleconeTraining\bristlecone-training-2024> git status
+On branch mamun-branch
+nothing to commit, working tree clean
+PS C:\Users\Mamun.Debnath\OneDrive - Mahindra & Mahindra Ltd.-55241918-Bristlecone India Pvt Ltd\Documents\BristleconeTraining\bristlecone-training-2024> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240221151454
+**********************
