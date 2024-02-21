@@ -1,0 +1,54 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240221162956
+Username: CORPBRISTLECONE\Ritesh.Mishra
+RunAs User: CORPBRISTLECONE\Ritesh.Mishra
+Configuration Name: 
+Machine: PUN-1VMD6Q3 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 3680
+PSVersion: 5.1.19041.4046
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4046
+BuildVersion: 10.0.19041.4046
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is ritesh.log
+PS C:\Ritesh\Training> git clone https://github.com/sureshnanjan/bristlecone-training-2024.git
+Cloning into 'bristlecone-training-2024'...
+remote: Enumerating objects: 44, done.
+remote: Counting objects: 100% (44/44), done.
+remote: Compressing objects: 100% (29/29), done.
+remote: Total 44 (delta 14), reused 41 (delta 11), pack-reused 0
+Receiving objects: 100% (44/44), 7.41 MiB | 1.14 MiB/s, done.
+Resolving deltas: 100% (14/14), done.
+PS C:\Ritesh\Training> git checkout -b ritesh-branch
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Ritesh\Training> git checkout -b Ritesh-branch
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Ritesh\Training> cd .\bristlecone-training-2024\git checkout -b ritesh-branch
+>> TerminatingError(Set-Location): "A positional parameter cannot be found that accepts argument 'checkout'."
+Set-Location : A positional parameter cannot be found that accepts argument 'checkout'.
+At line:1 char:1
++ cd .\bristlecone-training-2024\git checkout -b ritesh-branch
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-Location], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+Set-Location : A positional parameter cannot be found that accepts argument 'checkout'.
+At line:1 char:1
++ cd .\bristlecone-training-2024\git checkout -b ritesh-branch
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-Location], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Ritesh\Training> cd .\bristlecone-training-2024\
+PS C:\Ritesh\Training\bristlecone-training-2024> git checkout -b ritesh-branch
+Switched to a new branch 'ritesh-branch'
+PS C:\Ritesh\Training\bristlecone-training-2024> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240221173651
+**********************
