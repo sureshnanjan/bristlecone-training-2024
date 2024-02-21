@@ -1,0 +1,114 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240221173026
+Username: CORPBRISTLECONE\Pooja.Shervegar
+RunAs User: CORPBRISTLECONE\Pooja.Shervegar
+Configuration Name: 
+Machine: BLR-41KS473 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 5108
+PSVersion: 5.1.19041.4046
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4046
+BuildVersion: 10.0.19041.4046
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is pooja.log
+PS C:\Users\pooja.shervegar> git clone https://github.com/sureshnanjan/bristlecone-training-2024.git
+Cloning into 'bristlecone-training-2024'...
+remote: Enumerating objects: 55, done.
+remote: Counting objects: 100% (55/55), done.
+remote: Compressing objects: 100% (35/35), done.
+remote: Total 55 (delta 20), reused 49 (delta 14), pack-reused 0
+Receiving objects: 100% (55/55), 7.41 MiB | 884.00 KiB/s, done.
+Resolving deltas: 100% (20/20), done.
+PS C:\Users\pooja.shervegar> git checkout -b pooja_branch
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\pooja.shervegar> ll
+ll : The term 'll' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ ll
++ ~~
+    + CategoryInfo          : ObjectNotFound: (ll:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ll : The term 'll' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is
+correct and try again.
+At line:1 char:1
++ ll
++ ~~
+    + CategoryInfo          : ObjectNotFound: (ll:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\pooja.shervegar> ls
+
+
+    Directory: C:\Users\pooja.shervegar
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        19-09-2022     12:50                .cisco
+d-----        19-09-2022     17:27                .ms-ad
+d-----        11-10-2022     13:03                .VirtualBox
+d-r---        19-09-2022     12:50                3D Objects
+d-----        21-02-2024     17:31                bristlecone-training-2024
+d-r---        19-09-2022     12:50                Contacts
+d-----        20-10-2023     15:07                Documents
+d-r---        21-02-2024     16:49                Downloads
+d-r---        19-09-2022     12:50                Favorites
+d-r---        19-09-2022     12:50                Links
+d-r---        19-09-2022     12:50                Music
+d-r---        19-09-2022     12:53                OneDrive
+dar--l        21-02-2024     16:40                OneDrive - Mahindra & Mahindra Ltd.-55241918-Bristlecone India Pvt Ltd
+d-r---        19-09-2022     12:50                Saved Games
+d-r---        19-09-2022     12:50                Searches
+d-r---        21-07-2023     13:58                Videos
+d-----        22-09-2022     18:10                VirtualBox VMs
+-a----        21-02-2024     17:30              0 pooja.log
+
+
+PS C:\Users\pooja.shervegar> cd .\bristlecone-training-2024\
+PS C:\Users\pooja.shervegar\bristlecone-training-2024> ls
+
+
+    Directory: C:\Users\pooja.shervegar\bristlecone-training-2024
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        21-02-2024     17:31                api-postman
+d-----        21-02-2024     17:31                dbms
+d-----        21-02-2024     17:31                docker
+d-----        21-02-2024     17:31                gcp
+d-----        21-02-2024     17:31                jmeter
+d-----        21-02-2024     17:31                selenium
+
+
+PS C:\Users\pooja.shervegar\bristlecone-training-2024> git checkout -b pooja_branch
+Switched to a new branch 'pooja_branch'
+PS C:\Users\pooja.shervegar\bristlecone-training-2024> Stop-Transript
+Stop-Transript : The term 'Stop-Transript' is not recognized as the name of a cmdlet, function, script file, or 
+operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try 
+again.
+At line:1 char:1
++ Stop-Transript
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Stop-Transript:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+Stop-Transript : The term 'Stop-Transript' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included,
+verify that the path is correct and try again.
+At line:1 char:1
++ Stop-Transript
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Stop-Transript:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\pooja.shervegar\bristlecone-training-2024> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240221173320
+**********************
