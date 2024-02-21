@@ -1,0 +1,47 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240221144842
+Username: SURESHNANJAN\nanja
+RunAs User: SURESHNANJAN\nanja
+Configuration Name: 
+Machine: SURESHNANJAN (Microsoft Windows NT 10.0.22621.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 37404
+PSVersion: 5.1.22621.2506
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.2506
+BuildVersion: 10.0.22621.2506
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is suresh.log
+PS C:\Trainings-2021\Vendors\EduRamp> cd .\bristlecone-training-2024\
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024> dir
+
+
+    Directory: C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        21-02-2024     14:29                api-postman
+d-----        20-02-2024     22:25                dbms
+d-----        21-02-2024     14:29                docker
+d-----        21-02-2024     14:29                gcp
+d-----        21-02-2024     14:29                jmeter
+d-----        21-02-2024     14:29                selenium
+
+
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024> git status
+
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024> git checkout -b suresh-branch
+
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024> git status
+
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240221145950
+**********************
