@@ -1,6 +1,6 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20240222000311
+Start time: 20240222000907
 Username: CORPBRISTLECONE\Meghana.MS
 RunAs User: CORPBRISTLECONE\Meghana.MS
 Configuration Name: 
@@ -16,32 +16,6 @@ WSManStackVersion: 3.0
 PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
-Transcript started, output file is meghana.log
-PS C:\Users\meghana.ms\bristlecone-training-2024> Start-Transcript -Path database-activity-meghana.log
-Transcript started, output file is database-activity-meghana.log
-PS C:\Users\meghana.ms\bristlecone-training-2024> cd .\dbms\softwares\
-PS C:\Users\meghana.ms\bristlecone-training-2024\dbms\softwares> .\sqlite3.exe
-SQLite version 3.45.1 2024-01-30 16:01:20 (UTF-16 console I/O)
-Enter ".help" for usage hints.
-Connected to a transient in-memory database.
-Use ".open FILENAME" to reopen on a persistent database.
-sqlite> .tables
-sqlite> describe albums
-   ...> Program interrupted.
-PS C:\Users\meghana.ms\bristlecone-training-2024\dbms\softwares> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
-PS C:\Users\meghana.ms\bristlecone-training-2024\dbms\softwares> .\sqlite3.exe
-SQLite version 3.45.1 2024-01-30 16:01:20 (UTF-16 console I/O)
-Enter ".help" for usage hints.
-Connected to a transient in-memory database.
-Use ".open FILENAME" to reopen on a persistent database.
-sqlite>  Stop-Transcript
-   ...> Program interrupted.
-PS C:\Users\meghana.ms\bristlecone-training-2024\dbms\softwares> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
-PS C:\Users\meghana.ms\bristlecone-training-2024\dbms\softwares>  Stop-Transcript
-Transcript stopped, output file is C:\Users\meghana.ms\bristlecone-training-2024\database-activity-meghana.log
-PS C:\Users\meghana.ms\bristlecone-training-2024\dbms\softwares> Start-Transcript -Path database-activity-meghana.log
 Transcript started, output file is database-activity-meghana.log
 PS C:\Users\meghana.ms\bristlecone-training-2024\dbms\softwares> .\sqlite3.exe
 SQLite version 3.45.1 2024-01-30 16:01:20 (UTF-16 console I/O)
@@ -144,4 +118,7 @@ IFK_InvoiceLineInvoiceId           sqlite_autoindex_playlist_track_1
 IFK_InvoiceLineTrackId
 sqlite> .exit
 PS C:\Users\meghana.ms\bristlecone-training-2024\dbms\softwares> stop-transcript
-Transcript stopped, output file is C:\Users\meghana.ms\bristlecone-training-2024\dbms\softwares\database-activity-meghana.log
+**********************
+Windows PowerShell transcript end
+End time: 20240222001746
+**********************
