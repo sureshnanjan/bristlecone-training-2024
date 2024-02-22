@@ -1,0 +1,46 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240222111824
+Username: CORPBRISTLECONE\Aryan.Shrivastav
+RunAs User: CORPBRISTLECONE\Aryan.Shrivastav
+Configuration Name: 
+Machine: PUN-4QQBYY3 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 20384
+PSVersion: 5.1.22621.2506
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.2506
+BuildVersion: 10.0.22621.2506
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is aryan.log
+PS C:\Users\aryan.shrivastav\DBMS\bristlecone-training-2024\dbms\softwares> .\sqlite3.exe
+(
+    [EmployeeId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    [LastName] NVARCHAR(20)  NOT NULL,
+    [FirstName] NVARCHAR(20)  NOT NULL,
+    [Title] NVARCHAR(30),
+    [ReportsTo] INTEGER,
+    [BirthDate] DATETIME,
+    [HireDate] DATETIME,
+    [Address] NVARCHAR(70),
+    [City] NVARCHAR(40),
+    [State] NVARCHAR(40),
+    [Country] NVARCHAR(40),
+    [PostalCode] NVARCHAR(10),
+    [Phone] NVARCHAR(24),
+    [Fax] NVARCHAR(24),
+    [Email] NVARCHAR(60),
+    FOREIGN KEY ([ReportsTo]) REFERENCES "employees" ([EmployeeId])
+                ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+CREATE INDEX [IFK_EmployeeReportsTo] ON "employees" ([ReportsTo]);
+sqlite> .exit
+PS C:\Users\aryan.shrivastav\DBMS\bristlecone-training-2024\dbms\softwares> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240222113324
+**********************
