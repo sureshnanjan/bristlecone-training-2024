@@ -17,3 +17,30 @@ PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
 Transcript started, output file is aryan.log
+PS C:\Users\aryan.shrivastav\DBMS> git clone https://github.com/sureshnanjan/bristlecone-training-2024.git
+Cloning into 'bristlecone-training-2024'...
+remote: Enumerating objects: 31, done.
+remote: Counting objects: 100% (31/31), done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 31 (delta 8), reused 30 (delta 7), pack-reused 0
+Receiving objects: 100% (31/31), 7.41 MiB | 4.35 MiB/s, done.
+Resolving deltas: 100% (8/8), done.
+PS C:\Users\aryan.shrivastav\DBMS> git checkout -b AryaN-branch
+fatal: a branch named 'AryaN-branch' already exists
+PS C:\Users\aryan.shrivastav\DBMS> git checkout -b Arya-branch
+Switched to a new branch 'Arya-branch'
+PS C:\Users\aryan.shrivastav\DBMS> git init
+Reinitialized existing Git repository in C:/Users/aryan.shrivastav/DBMS/.git/
+PS C:\Users\aryan.shrivastav\DBMS> git checkout -b Arya-branch
+fatal: a branch named 'Arya-branch' already exists
+PS C:\Users\aryan.shrivastav\DBMS> git add .
+
+PS C:\Users\aryan.shrivastav\DBMS> git commit -m "adding arya branch"
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+PS C:\Users\aryan.shrivastav\DBMS> git remote add origin https://github.com/sureshnanjan/bristlecone-training-2024.git
+
+PS C:\Users\aryan.shrivastav\DBMS> git push -u origin Arya-branch
+
