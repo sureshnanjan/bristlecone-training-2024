@@ -1,0 +1,61 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240226123547
+Username: CORPBRISTLECONE\VaibhavSampat.Pagar
+RunAs User: CORPBRISTLECONE\VaibhavSampat.Pagar
+Configuration Name: 
+Machine: MUM-185B6Q3 (Microsoft Windows NT 10.0.19045.0)
+Host Application: PowerShell.exe -noexit -command Set-Location -literalPath 'C:\Users\vaibhavsampat.pagar\selenium, jmeter\sql'
+Process ID: 19816
+PSVersion: 5.1.19041.4046
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4046
+BuildVersion: 10.0.19041.4046
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is vaibhav.log
+PS C:\Users\vaibhavsampat.pagar\selenium, jmeter\sql> git clone https://github.com/sureshnanjan/bristlecone-training-2024.git
+Cloning into 'bristlecone-training-2024'...
+remote: Enumerating objects: 170, done.
+remote: Counting objects: 100% (170/170), done.
+remote: Compressing objects: 100% (111/111), done.
+remote: Total 170 (delta 68), reused 147 (delta 45), pack-reused 0
+iB/s
+Receiving objects: 100% (170/170), 8.76 MiB | 766.00 KiB/s, done.
+Resolving deltas: 100% (68/68), done.
+PS C:\Users\vaibhavsampat.pagar\selenium, jmeter\sql> cd .\bristlecone-training-2024\
+PS C:\Users\vaibhavsampat.pagar\selenium, jmeter\sql\bristlecone-training-2024> dir
+
+
+    Directory: C:\Users\vaibhavsampat.pagar\selenium, jmeter\sql\bristlecone-training-2024
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26-02-2024     12:37                api-postman
+d-----        26-02-2024     12:37                dbms
+d-----        26-02-2024     12:37                docker
+d-----        26-02-2024     12:37                gcp
+d-----        26-02-2024     12:37                jmeter
+d-----        26-02-2024     12:37                selenium
+-a----        26-02-2024     12:37           1135 aryanDB.log
+
+
+PS C:\Users\vaibhavsampat.pagar\selenium, jmeter\sql\bristlecone-training-2024> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\vaibhavsampat.pagar\selenium, jmeter\sql\bristlecone-training-2024> git checkout -b vaibhav-branch
+Switched to a new branch 'vaibhav-branch'
+PS C:\Users\vaibhavsampat.pagar\selenium, jmeter\sql\bristlecone-training-2024> git status
+On branch vaibhav-branch
+nothing to commit, working tree clean
+PS C:\Users\vaibhavsampat.pagar\selenium, jmeter\sql\bristlecone-training-2024> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240226124205
+**********************
