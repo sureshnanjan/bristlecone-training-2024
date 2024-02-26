@@ -2,6 +2,7 @@
 /shelf/
 /workspace.xml
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
@@ -9,3 +10,5 @@
 /dataSources.local.xml
 =======
 >>>>>>> ab9af75 (Database Components Activity)
+=======
+>>>>>>> suresh-branch

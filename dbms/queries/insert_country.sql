@@ -1,0 +1,2 @@
+INSERT INTO country(country_id,country_name) VALUES(12345,"INDIA"),(98765,"USA"),(45678,"CANADA"),
+(23456,"GERMANY"),(67890,"SPAIN"),(34567,"ICELAND");
