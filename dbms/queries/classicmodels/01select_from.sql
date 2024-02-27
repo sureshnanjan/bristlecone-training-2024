@@ -1,5 +1,5 @@
 -- The employees table has eight columns: employeeNumber, lastName, firstName, extension, email, officeCode, -- reportsTo, and jobTitle.
-SELECT lastName FROM employees; -- The result of a SELECT statement is called a result set 
+SELECT lastName as "Employee Name" FROM employees; -- The result of a SELECT statement is called a result set 
 
 SELECT lastName, firstName, jobTitle FROM employees;
 
