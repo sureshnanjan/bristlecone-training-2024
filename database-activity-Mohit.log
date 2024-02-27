@@ -1,0 +1,121 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240227163744
+Username: CORPBRISTLECONE\Mohit.Sehgal
+RunAs User: CORPBRISTLECONE\Mohit.Sehgal
+Configuration Name: 
+Machine: DEL-2QVTFB3 (Microsoft Windows NT 10.0.19045.0)
+Host Application: PowerShell.exe -noexit -command Set-Location -literalPath 'C:\MohitS-branch\bristlecone-training-2024'
+Process ID: 12788
+PSVersion: 5.1.19041.4046
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4046
+BuildVersion: 10.0.19041.4046
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is database-activity-Mohit.log
+PS C:\MohitS-branch\bristlecone-training-2024> cd .\dbms\softwares\
+PS C:\MohitS-branch\bristlecone-training-2024\dbms\softwares> .\sqlite3.exe
+SQLite version 3.45.1 2024-01-30 16:01:20 (UTF-16 console I/O)
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .open chinook.db
+sqlite> .help
+.archive ...             Manage SQL archives
+.auth ON|OFF             Show authorizer callbacks
+.backup ?DB? FILE        Backup DB (default "main") to FILE
+.bail on|off             Stop after hitting an error.  Default OFF
+.cd DIRECTORY            Change the working directory to DIRECTORY
+.changes on|off          Show number of rows changed by SQL
+.check GLOB              Fail if output since .testcase does not match
+.clone NEWDB             Clone data into NEWDB from the existing database
+.connection [close] [#]  Open or close an auxiliary database connection
+.crnl on|off             Translate \n to \r\n.  Default ON
+.databases               List names and files of attached databases
+.dbconfig ?op? ?val?     List or change sqlite3_db_config() options
+.dbinfo ?DB?             Show status information about the database
+.dump ?OBJECTS?          Render database content as SQL
+.echo on|off             Turn command echo on or off
+.eqp on|off|full|...     Enable or disable automatic EXPLAIN QUERY PLAN
+.excel                   Display the output of next command in spreadsheet
+.exit ?CODE?             Exit this program with return-code CODE
+.expert                  EXPERIMENTAL. Suggest indexes for queries
+.explain ?on|off|auto?   Change the EXPLAIN formatting mode.  Default: auto
+.filectrl CMD ...        Run various sqlite3_file_control() operations
+.fullschema ?--indent?   Show schema and the content of sqlite_stat tables
+.headers on|off          Turn display of headers on or off
+.help ?-all? ?PATTERN?   Show help text for PATTERN
+.import FILE TABLE       Import data from FILE into TABLE
+.indexes ?TABLE?         Show names of indexes
+.limit ?LIMIT? ?VAL?     Display or change the value of an SQLITE_LIMIT
+.lint OPTIONS            Report potential schema issues.
+.load FILE ?ENTRY?       Load an extension library
+.log FILE|on|off         Turn logging on or off.  FILE can be stderr/stdout
+.mode MODE ?OPTIONS?     Set output mode
+.nonce STRING            Suspend safe mode for one command if nonce matches
+.nullvalue STRING        Use STRING in place of NULL values
+.once ?OPTIONS? ?FILE?   Output for the next SQL command only to FILE
+.open ?OPTIONS? ?FILE?   Close existing database and reopen FILE
+.output ?FILE?           Send output to FILE or stdout if FILE is omitted
+.parameter CMD ...       Manage SQL parameter bindings
+.print STRING...         Print literal STRING
+.progress N              Invoke progress handler after every N opcodes
+.prompt MAIN CONTINUE    Replace the standard prompts
+.quit                    Stop interpreting input stream, exit if primary.
+.read FILE               Read input from FILE or command output
+.recover                 Recover as much data as possible from corrupt db.
+.restore ?DB? FILE       Restore content of DB (default "main") from FILE
+.save ?OPTIONS? FILE     Write database to FILE (an alias for .backup ...)
+.scanstats on|off|est    Turn sqlite3_stmt_scanstatus() metrics on or off
+.schema ?PATTERN?        Show the CREATE statements matching PATTERN
+.separator COL ?ROW?     Change the column and row separators
+.session ?NAME? CMD ...  Create or control sessions
+.sha3sum ...             Compute a SHA3 hash of database content
+.shell CMD ARGS...       Run CMD ARGS... in a system shell
+.show                    Show the current values for various settings
+.stats ?ARG?             Show stats or turn stats on or off
+.system CMD ARGS...      Run CMD ARGS... in a system shell
+.tables ?TABLE?          List names of tables matching LIKE pattern TABLE
+.timeout MS              Try opening locked tables for MS milliseconds
+.timer on|off            Turn SQL timer on or off
+.trace ?OPTIONS?         Output each SQL statement as it is run
+.version                 Show source, library and compiler versions
+.vfsinfo ?AUX?           Information about the top-level VFS
+.vfslist                 List all available VFSes
+.vfsname ?AUX?           Print the name of the VFS stack
+.width NUM1 NUM2 ...     Set minimum column widths for columnar output
+sqlite> .tables
+albums          employees       invoices        playlists
+artists         genres          media_types     tracks
+customers       invoice_items   playlist_track
+sqlite> .schema albums
+CREATE TABLE IF NOT EXISTS "albums"
+(
+    [AlbumId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    [Title] NVARCHAR(160)  NOT NULL,
+    [ArtistId] INTEGER  NOT NULL,
+    FOREIGN KEY ([ArtistId]) REFERENCES "artists" ([ArtistId])
+                ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+CREATE INDEX [IFK_AlbumArtistId] ON "albums" ([ArtistId]);
+sqlite> .database
+main: C:\MohitS-branch\bristlecone-training-2024\dbms\softwares\chinook.db r/w
+sqlite> .table '%es'
+employees    genres       invoices     media_types
+sqlite> .indexes
+IFK_AlbumArtistId                  IFK_PlaylistTrackTrackId
+IFK_CustomerSupportRepId           IFK_TrackAlbumId
+IFK_EmployeeReportsTo              IFK_TrackGenreId
+IFK_InvoiceCustomerId              IFK_TrackMediaTypeId
+IFK_InvoiceLineInvoiceId           sqlite_autoindex_playlist_track_1
+IFK_InvoiceLineTrackId
+sqlite> .exit
+PS C:\MohitS-branch\bristlecone-training-2024\dbms\softwares> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240227164030
+**********************
