@@ -1,9 +1,3 @@
-/*
-  Name: MySQL Sample Database classicmodels
-  Link: http://www.mysqltutorial.org/mysql-sample-database.aspx
-*/
-
-
 /* Create the database */
 CREATE DATABASE  IF NOT EXISTS classicmodels;
 
@@ -196,3 +190,133 @@ FROM
     employees
 WHERE
     jobtitle = 'Sales Rep';
+    
+    SELECT 
+    lastname, 
+    firstname, 
+    jobtitle,
+    officeCode
+FROM
+    employees
+WHERE
+    jobtitle = 'Sales Rep' AND 
+    officeCode = 1;
+    
+    SELECT 
+    lastName, 
+    firstName, 
+    jobTitle, 
+    officeCode
+FROM
+    employees
+WHERE
+    jobtitle = 'Sales Rep' OR 
+    officeCode = 1
+ORDER BY 
+    officeCode , 
+    jobTitle;
+    
+    SELECT 
+    lastname
+FROM
+    employees
+ORDER BY 
+    lastname;
+-- All Nulls will be removed except one occurrence	
+SELECT DISTINCT state
+FROM customers;
+
+SELECT 
+    customername, 
+    country, 
+    state
+FROM
+    customers
+WHERE
+    country = 'USA' AND 
+    state = 'CA';
+    
+    SELECT 
+    customername, 
+    country, 
+    state, 
+    creditlimit
+FROM
+    customers
+WHERE
+    country = 'USA' AND 
+    state = 'CA' AND 
+    creditlimit > 100000;
+    
+    SELECT   
+	customername, 
+	country, 
+	creditLimit
+FROM   
+	customers
+WHERE(country = 'USA'
+		OR country = 'France')
+	  AND creditlimit > 100000;
+      
+      SELECT   
+	customername, 
+	country, 
+	creditLimit
+FROM   
+	customers
+WHERE country = 'USA'
+	  OR country = 'France'
+	  AND creditlimit > 100000;
+      
+      SELECT 1 IN (1,2,3); -- returns 1 because 1 is in the list:
+SELECT 4 IN (1,2,3); -- returns 0 because 4 is not in the list:
+
+SELECT 
+    officeCode, 
+    city, 
+    phone, 
+    country
+FROM
+    offices
+WHERE
+    country IN ('USA' , 'France');
+    
+    SELECT 1 NOT IN (1,2,3); 
+
+SELECT 
+    officeCode, 
+    city, 
+    phone
+FROM
+    offices
+WHERE
+    country NOT IN ('USA' , 'France')
+ORDER BY 
+    city;
+    
+    SELECT 
+    employeeNumber, 
+    lastName, 
+    firstName
+FROM
+    employees
+WHERE
+    firstName LIKE 'a%';
+    
+    SELECT 
+    employeeNumber, 
+    lastName, 
+    firstName
+FROM
+    employees
+WHERE
+    lastName LIKE '%on';
+    
+    SELECT 
+    customerNumber, 
+    customerName, 
+    creditLimit
+FROM
+    customers
+ORDER BY creditLimit DESC
+LIMIT 5;
