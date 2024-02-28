@@ -1,0 +1,62 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240228144108
+Username: SURESHNANJAN\nanja
+RunAs User: SURESHNANJAN\nanja
+Configuration Name: 
+Machine: SURESHNANJAN (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 41716
+PSVersion: 5.1.22621.2506
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.2506
+BuildVersion: 10.0.22621.2506
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is suresh_new.log
+PS C:\Trainings-2021\Vendors\EduRamp> git 
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local bran
+ch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+PS C:\Trainings-2021\Vendors\EduRamp> cls
+PS C:\Trainings-2021\Vendors\EduRamp> cd .\bristlecone-training-2024\
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024> git status
+On branch suresh-branch
+Your branch is up to date with 'origin/suresh-branch'.
+
+nothing to commit, working tree clean
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024> start .
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024> git status
+On branch suresh-branch
+Your branch is up to date with 'origin/suresh-branch'.
+
+nothing to commit, working tree clean
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240228150523
+**********************
