@@ -49,3 +49,12 @@ index_list:
 
 -- In MySQL, JOIN, CROSS JOIN, and INNER JOIN are syntactic equivalents (they can replace each other)
 select * from left_table inner join right_table on left_table.lt_id = right_table.rt_fk;
+select * from left_table inner join right_table; -- without an ON condition it does a cartesian product
+select * from left_table, right_table; -- comma is equivalent to inner joing
+-- Aliases could be used
+ -- select LT.lt_id, LT.lt-data1, RT.rt_id, RT.rt_fk, RT.rt_data1 from left_table AS LT inner join right_table AS RT on LT.lt_id = RT.rt_fk;
+select * from left_table AS LT inner join right_table AS RT on LT.lt_id = RT.rt_fk;
+-- Error Code: 1054. Unknown column 'LT.lt' in 'field list'
+
+table left_table;
+table right_table

@@ -1,0 +1,5 @@
+lt_id,lt_data1,common,rt_id,lt_id,rt_data1,common
+1,LT-1,A,1,1,RT-1,A
+2,LT-2,B,2,2,RT-2,D
+NULL,NULL,NULL,3,4,RT-3,C
+NULL,NULL,NULL,4,5,RT-4,F
