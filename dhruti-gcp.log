@@ -1,0 +1,71 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240229153645
+Username: CORPBRISTLECONE\DhrutiAnil.Vachhani
+RunAs User: CORPBRISTLECONE\DhrutiAnil.Vachhani
+Configuration Name: 
+Machine: BLR-50YRXD3 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 18868
+PSVersion: 5.1.19041.4046
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4046
+BuildVersion: 10.0.19041.4046
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is dhruti-gcp.log
+PS C:\Users\dhrutianil.vachhani> Invoke-WebRequest -Uri "https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe" -OutFile .\GoogleCloudSDKInstaller.exe
+PS C:\Users\dhrutianil.vachhani> dir
+
+
+    Directory: C:\Users\dhrutianil.vachhani
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         1/23/2024   3:53 PM                .cache
+d-----         2/21/2024   1:34 PM                .docker
+d-----         1/24/2024  10:25 AM                .eclipse
+d-----         1/29/2024  10:32 AM                .lemminx
+d-----         1/25/2024  10:27 AM                .m2
+d-----         1/22/2024   6:09 PM                .openjfx
+d-----          2/1/2024   9:26 AM                .p2
+d-----         1/31/2024   9:25 AM                .soapuios
+d-----         1/22/2024   1:12 PM                .suitecloud-sdk
+d-----         1/11/2024  10:25 AM                .vscode
+d-r---          1/8/2024   6:23 PM                3D Objects
+d-r---          1/8/2024   6:23 PM                Contacts
+d-----          1/8/2024   6:34 PM                Documents
+d-r---         2/29/2024   3:17 PM                Downloads
+d-----         1/24/2024  10:16 AM                eclipse
+d-----          2/1/2024   9:28 AM                eclipse-workspace
+d-r---          1/8/2024   6:23 PM                Favorites
+d-----         2/21/2024   1:41 PM                IdeaProjects
+d-r---          1/8/2024   6:23 PM                Links
+d-r---          1/8/2024   6:23 PM                Music
+d-r---          1/8/2024   6:33 PM                OneDrive
+dar--l         2/29/2024   2:19 PM                OneDrive - Mahindra &
+                                                  Mahindra
+                                                  Ltd.-55241918-Bristlecone
+                                                  India Pvt Ltd
+d-----         1/22/2024   6:11 PM                Postman
+d-r---          1/8/2024   6:23 PM                Saved Games
+d-r---          1/8/2024   6:23 PM                Searches
+d-----         1/31/2024   9:25 AM                SoapUI-Tutorials
+d-r---         1/12/2024   9:53 AM                Videos
+-a----         1/31/2024   1:52 PM            446 default-soapui-workspace.x
+                                                  ml
+-a----         2/29/2024   3:36 PM              0 dhruti-gcp.log
+-a----         2/29/2024   3:37 PM         267520 GoogleCloudSDKInstaller.ex
+                                                  e
+-a----         1/31/2024   1:52 PM           2524 soapui-settings.xml
+
+
+PS C:\Users\dhrutianil.vachhani> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240229162402
+**********************
