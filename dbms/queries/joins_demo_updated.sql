@@ -44,16 +44,16 @@ optimizer that the tables must be joined from left to right in the order they ar
 the query.
 STRAIGHT_JOIN is similar to JOIN, except that the left table is always read 
 before the right table.
-*/
+
 -- STRAIGHT_JOIN 
 select * from left_table STRAIGHT_JOIN right_table ON left_table.lt_id = right_table.lt_id;
 select * from left_table STRAIGHT_JOIN right_table ON left_table.lt_id = right_table.lt_id AND 
 left_table.common = right_table.common;
-/*
+
 The INNER JOIN clause compares each row in table_1 with every row in the table_2 based on the join condition. 
 - If rows from both tables cause the join condition to evaluate to TRUE, the INNER JOIN creates a new row whose columns contain all columns of rows from the tables and includes this new row in the result set. 
 - If no row between tables causes the join condition to be evaluated to TRUE, the INNER JOIN returns an empty result set
-*/
+
 -- Inner Join
 select * from left_table INNER JOIN right_table ON left_table.lt_id = right_table.lt_id;
 select * from left_table INNER JOIN right_table ON left_table.lt_id = right_table.lt_id AND 
@@ -93,6 +93,7 @@ select * from left_table NATURAL LEFT OUTER JOIN right_table;
 select * from left_table NATURAL RIGHT JOIN right_table;
 -- table_reference NATURAL RIGHT OUTER JOIN 17
 select * from left_table NATURAL RIGHT OUTER JOIN right_table;
+*/
 
 
 

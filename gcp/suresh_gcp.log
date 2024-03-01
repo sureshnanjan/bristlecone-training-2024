@@ -1,0 +1,84 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240229135120
+Username: SURESHNANJAN\nanja
+RunAs User: SURESHNANJAN\nanja
+Configuration Name: 
+Machine: SURESHNANJAN (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 41716
+PSVersion: 5.1.22621.2506
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.2506
+BuildVersion: 10.0.22621.2506
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is suresh_gcp.log
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp> (New-Object Net.WebClient).DownloadFile("https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe", "GoogleCloudSDKInstaller.exe")
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp> & GoogleCloudSDKInstaller.exe
+& : The term 'GoogleCloudSDKInstaller.exe' is not recognized as the name of a cmdlet, function, script file, or 
+operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try 
+again.
+At line:1 char:3
++ & GoogleCloudSDKInstaller.exe
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (GoogleCloudSDKInstaller.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+& : The term 'GoogleCloudSDKInstaller.exe' is not recognized as the name of a
+cmdlet, function, script file, or operable program. Check the spelling of the name,
+or if a path was included, verify that the path is correct and try again.
+At line:1 char:3
++ & GoogleCloudSDKInstaller.exe
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (GoogleCloudSDKInstaller.exe:String)
+   [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp> dir
+
+
+    Directory: C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        21-02-2024     14:29              0 readme.txt
+-a----        29-02-2024     13:51            663 suresh_gcp.log
+
+
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp> Invoke-WebRequest -Uri "https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe" -OutFile .
+>> TerminatingError(Invoke-WebRequest): "Access to the path 'C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp' is denied."
+Invoke-WebRequest : Access to the path 'C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp' is denied.
+At line:1 char:1
++ Invoke-WebRequest -Uri "https://dl.google.com/dl/cloudsdk/channels/ra ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Invoke-WebRequest], UnauthorizedAccessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+Invoke-WebRequest : Access to the path
+'C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp' is denied.
+At line:1 char:1
++ Invoke-WebRequest -Uri "https://dl.google.com/dl/cloudsdk/channels/ra ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Invoke-WebRequest], UnauthorizedAc
+   cessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShe
+   ll.Commands.InvokeWebRequestCommand
+
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp> Invoke-WebRequest -Uri "https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe" -OutFile .\GoogleCloudSDKInstaller.exe
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp> dir
+
+
+    Directory: C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        29-02-2024     14:00         267520 GoogleCloudSDKInstaller.exe
+-a----        21-02-2024     14:29              0 readme.txt
+-a----        29-02-2024     13:51            663 suresh_gcp.log
+
+
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp> & .\GoogleCloudSDKInstaller.exe
