@@ -82,3 +82,17 @@ Mode                 LastWriteTime         Length Name
 
 
 PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp> & .\GoogleCloudSDKInstaller.exe
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp> cls
+PS C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp> dir
+
+
+    Directory: C:\Trainings-2021\Vendors\EduRamp\bristlecone-training-2024\gcp
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        29-02-2024     14:00         267520 GoogleCloudSDKInstaller.exe
+-a----        21-02-2024     14:29              0 readme.txt
+-a----        29-02-2024     14:00           4514 suresh_gcp.log
+
+
