@@ -1,0 +1,29 @@
+1.Positive Test Case: Successful Authentication
+
+Input: Valid username "admin" and password "password123".
+Expected Output: status - success 200
+
+2.Negative Test Case: Missing Username
+
+Input: No username provided in the request.
+Expected Output: status - failure 400
+
+3.Negative Test Case: Missing Password
+
+Input: No password provided in the request.
+Expected Output: status - failure 400
+
+4.Negative Test Case: Invalid Password
+
+Input: Invalid password (e.g., "password987").
+Expected Output: status - failure 400
+
+5.Negative Test Case: Invalid username
+
+Input: Invalid username (e.g., "adminacess").
+Expected Output: status - failure 400
+
+6.Negative Test Case: Empty feilds
+
+Input: feilds are kept empty
+Expected Output: status - failure 400

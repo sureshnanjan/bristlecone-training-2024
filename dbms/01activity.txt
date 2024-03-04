@@ -1,2 +1,0 @@
-https://www.sqlitetutorial.net/sqlite-sample-database/
-https://www.sqlitetutorial.net/sqlite-commands/
