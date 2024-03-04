@@ -1,0 +1,4 @@
+t1_pk_fk,t2_pk,t2_value_column
+1,ONE,t2-some-value-1
+4,TH3,t2-some-value-3
+3,TWO,t2-some-value-2
