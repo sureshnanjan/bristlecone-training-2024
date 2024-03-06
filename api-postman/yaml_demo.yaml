@@ -1,0 +1,20 @@
+---
+ start-doc: "YAML begins with 3 dashes"
+ next: 'a single file can have multiple documents delimited with --- at the beginning of line'
+ string-types: a string could have ' or " or no quotes at all all are same
+ pi: 3.14159
+ boolean: true
+ anumber: 3
+ listof-things:
+   - item1
+   - item2
+   - item3
+   - item4
+ xmas-fifth-day:
+   calling-birds: four
+   french-hens: 3
+   golden-rings: 5
+   partridges:
+     count: 1
+     location: "a pear tree"
+   turtle-doves: two
