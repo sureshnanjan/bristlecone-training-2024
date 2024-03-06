@@ -18,7 +18,7 @@ Get-GceInstance -Project bristlecone-gcp |
 Get-Command -Module GoogleCloud -Verb get
 
 # IAM commands
-Get-GcIamPolicyBinding | select -Property Members
+Get-GcIamPolicyBinding | select -ExpandProperty Members
 
 # SQL Commands
 Get-GcSqlInstance | select -ExpandProperty Settings
