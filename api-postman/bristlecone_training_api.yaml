@@ -1,0 +1,28 @@
+openapi: 3.0.0
+info:
+  title: Bristlecone Training API
+  description: This api provides the capability to manage our QA training
+  version: 1.0.0
+paths:
+  /trainer:
+    summary: Get the information about the trainer
+    description: 'Get details about the trainer '
+    get:
+      summary: Gets the details of the trainer
+      description: This get the details of the trainer handling the bristlecone training
+      operationId: trainer-get-details
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              examples:
+                suresh-trainer:
+                  value: |-
+                    {
+                    "name":"Suresh",
+                    "skills":['automation','gcp','api']
+                    }
+      tags:
+        - trainer
+        - get
