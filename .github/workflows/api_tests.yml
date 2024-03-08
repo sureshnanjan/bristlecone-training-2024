@@ -17,10 +17,7 @@ jobs:
         run: |
           npm install -g newman newman-reporter-slackreporter newman-reporter-htmlextra
       - name: Run API Tests
-        id: run-newman
-        uses: anthonyvscode/newman-action@v1
-        with:
-          collection: 'api-postman\Postman Echo.postman_collection.json'
-          reporters: cli
+        run: |
+          newman run 'api-postman/collections/Postman Echo.postman_collection.json' -r cli,htmlextra --reporter-htmlextra-export TestArtifacts/test-results.html
       - name: Output summary to console
         run: echo ${{ steps.run-newman.outputs.summary }}
