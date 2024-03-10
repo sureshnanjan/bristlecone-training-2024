@@ -1,0 +1,925 @@
+{
+	"info": {
+		"_postman_id": "c71bb20b-81d7-448d-ac77-dfefa0a03891",
+		"name": "petstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32616018"
+	},
+	"item": [
+		{
+			"name": "pets-dummy",
+			"item": [
+				{
+					"name": "find pets",
+					"item": [
+						{
+							"name": "find pets positive",
+							"item": [
+								{
+									"name": "get  pets",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"console.log(\"tags is in string format\");\r",
+													"console.log(\"tags filters the data based on specified tag\");\r",
+													"console.log(\"limits is in integer format\");\r",
+													"console.log(\"limits returns the maximum number of result that are possible\");\r",
+													"console.log(\"response code for positive output is 200\");\r",
+													"console.log(\"the result should be an array of objects\");\r",
+													"console.log(`the result should be in a json format like this -\r",
+													"[\r",
+													"      {\r",
+													"    \"id\": \"<long>\",\r",
+													"    \"name\": \"<string>\",\r",
+													"    \"tag\": \"<string>\"\r",
+													"  },\r",
+													"  {\r",
+													"    \"id\": \"<long>\",\r",
+													"    \"name\": \"<string>\",\r",
+													"    \"tag\": \"<string>\"\r",
+													"  },...\r",
+													"    ...\r",
+													"    ...\r",
+													"]\r",
+													"\r",
+													"`);\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/pets?tags=<string>,<string>&limit=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets"
+											],
+											"query": [
+												{
+													"key": "tags",
+													"value": "<string>,<string>"
+												},
+												{
+													"key": "limit",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "get  pets",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/pets?tags=<string>,<string>&limit=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"pets"
+													],
+													"query": [
+														{
+															"key": "tags",
+															"value": "<string>,<string>"
+														},
+														{
+															"key": "limit",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": "[\r\n  {\r\n    \"id\": \"<long>\",\r\n    \"name\": \"<string>\",\r\n    \"tag\": \"<string>\"\r\n  },\r\n  {\r\n    \"id\": \"<long>\",\r\n    \"name\": \"<string>\",\r\n    \"tag\": \"<string>\"\r\n  }\r\n]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "find pets negative",
+							"item": [
+								{
+									"name": "get pet tag invalid",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"console.log(\"the tag that is not present in the collection should give an error\");\r",
+													"console.log(\"the response code for invaid data should be 500\");\r",
+													"console.log(\"the output should give return message for the error - like the tag doesn't exist\");\r",
+													"console.log(\"the error should be in json format\");\r",
+													"console.log(`the or should be like this \r",
+													"    {\r",
+													"  \"code\": \"<integer>\",\r",
+													"  \"message\": \"<string>\"\r",
+													"}\r",
+													"`)"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/pets?tags=<invalid_tag>,<string>&limit=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets"
+											],
+											"query": [
+												{
+													"key": "tags",
+													"value": "<invalid_tag>,<string>"
+												},
+												{
+													"key": "limit",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "get pet tag invalid",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/pets?tags=<invalid_tag>,<string>&limit=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"pets"
+													],
+													"query": [
+														{
+															"key": "tags",
+															"value": "<invalid_tag>,<string>"
+														},
+														{
+															"key": "limit",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": "{\r\n  \"code\": \"<integer>\",\r\n  \"message\": \"<string>\"\r\n}"
+										}
+									]
+								},
+								{
+									"name": "get pet invalid limit",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"console.log(\"limit should be an integer\");\r",
+													"console.log(\"if the limit is invalid than then error should be given in json format\");\r",
+													"console.log(\"the response code for invaid data should be 500\");\r",
+													"console.log(`the or should be like this \r",
+													"    {\r",
+													"  \"code\": \"<integer>\",\r",
+													"  \"message\": \"<string>\"\r",
+													"}\r",
+													"`);"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/pets?tags=<invalid_tag>,<string>&limit=<Invalid_limit>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets"
+											],
+											"query": [
+												{
+													"key": "tags",
+													"value": "<invalid_tag>,<string>"
+												},
+												{
+													"key": "limit",
+													"value": "<Invalid_limit>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "get pet invalid limit",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/pets?tags=<invalid_tag>,<string>&limit=<Invalid_limit>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"pets"
+													],
+													"query": [
+														{
+															"key": "tags",
+															"value": "<invalid_tag>,<string>"
+														},
+														{
+															"key": "limit",
+															"value": "<Invalid_limit>"
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": "{\r\n  \"code\": \"<integer>\",\r\n  \"message\": \"<string>\"\r\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "id",
+					"item": [
+						{
+							"name": "get pet by id",
+							"item": [
+								{
+									"name": "get pet by id positive",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"console.log(\"Only single object with the particular id whould be fetched\");\r",
+													"console.log(\"the id :should not be empty\");\r",
+													"console.log(\"the id should be long\");\r",
+													"console.log(\"All fields should be visible , id , name , tag of the particualr id\")\r",
+													"console.log(\"status code should be 200 when a particular object is fetced\")\r",
+													"console.log(\"the result should be in json format\");\r",
+													"console.log(`the result should be like this : {\r",
+													"  \"id\": \"<long>\",\r",
+													"  \"name\": \"<string>\",\r",
+													"  \"tag\": \"<string>\"\r",
+													"}`)\r",
+													"console.log(\"id should be long\")\r",
+													"console.log(\"name should be an integer\")\r",
+													"console.log(\"tag should be string\");"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/pets/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "get pet by id positive",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/pets/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"pets",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": ""
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": "{\r\n  \"id\": \"<long>\",\r\n  \"name\": \"<string>\",\r\n  \"tag\": \"<string>\"\r\n}"
+										}
+									]
+								},
+								{
+									"name": "get pet id negative",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"console.log(\"the data for the id that dosen't exist should give error\");\r",
+													"console.log(\"the response code should be 500\");\r",
+													"console.log(\"the message should be clear  - user does not exist , please enter a valid userid\");\r",
+													"console.log(\"the error should be an object\");\r",
+													"console.log(\"the error should be in json format\");\r",
+													"console.log(`the error should be like this in the output : \r",
+													"{\r",
+													"  \"code\": \"<integer>\",\r",
+													"  \"message\": \"<string>\"\r",
+													"}\r",
+													"`);"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/pets/:invalid_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets",
+												":invalid_id"
+											],
+											"variable": [
+												{
+													"key": "invalid_id",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "get pet id negative",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/pets/:invalid_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"pets",
+														":invalid_id"
+													],
+													"variable": [
+														{
+															"key": "invalid_id",
+															"value": ""
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": "{\r\n  \"code\": \"<integer>\",\r\n  \"message\": \"<string>\"\r\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "delete pet by id",
+							"item": [
+								{
+									"name": "delete pet by id positive",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"console.log(\"Only single object with the particular id whould be fetched\");\r",
+													"console.log(\"the id :should not be empty\");\r",
+													"console.log(\"the id should be long\");\r",
+													"console.log(\"message should be given , record deleted successfully\");\r",
+													"console.log(\"All fields should be visible message, id , name , tag of the particualr id\")\r",
+													"console.log(\"status code should be 204 when a particular object is fetced\")\r",
+													"console.log(\"the result should be in json format\");\r",
+													"console.log(`the result should be like this : {\r",
+													"    message:<string>,\r",
+													"  \"id\": \"<long>\",\r",
+													"  \"name\": \"<string>\",\r",
+													"  \"tag\": \"<string>\"\r",
+													"}`)\r",
+													"console.log(\"id should be long\")\r",
+													"console.log(\"name should be an integer\")\r",
+													"console.log(\"tag should be string\");\r",
+													"console.log(\"message should be a string\");"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/pets/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "delete pet by id positive",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/pets/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"pets",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": ""
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": "{\r\n    message:<string>,\r\n  \"id\": \"<long>\",\r\n  \"name\": \"<string>\",\r\n  \"tag\": \"<string>\"\r\n}"
+										}
+									]
+								},
+								{
+									"name": "delete pet by id negative",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"console.log(\"the data for the id that dosen't exist should give error\");\r",
+													"console.log(\"the response code should be 500\");\r",
+													"console.log(\"the message should be clear  - record does not exist , please enter a valid id\");\r",
+													"console.log(\"the error should be an object\");\r",
+													"console.log(\"the error should be in json format\");\r",
+													"console.log(`the error should be like this in the output : \r",
+													"{\r",
+													"  \"code\": \"<integer>\",\r",
+													"  \"message\": \"<string>\"\r",
+													"}\r",
+													"`);"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/pets/:invalid_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets",
+												":invalid_id"
+											],
+											"variable": [
+												{
+													"key": "invalid_id",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "delete pet by id negative",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/pets/:invalid_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"pets",
+														":invalid_id"
+													],
+													"variable": [
+														{
+															"key": "invalid_id",
+															"value": ""
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": "{\r\n  \"code\": \"<integer>\",\r\n  \"message\": \"<string>\"\r\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "post pets",
+					"item": [
+						{
+							"name": "post pet positive",
+							"item": [
+								{
+									"name": "post pets",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"console.log(\"id should be unique and long\");\r",
+													"console.log(\"id is not a manadatory field to be mentioned in a body , if mentioned it should be unique\");\r",
+													"console.log(\"name should be string and required\");\r",
+													"console.log(\"tag should be string and required\");\r",
+													"console.log(`the input passed in the body should be like this -\r",
+													"{\r",
+													"  \"name\": \"<string>\",\r",
+													"  \"tag\": \"<string>\"\r",
+													"}\r",
+													" `)\r",
+													"console.log(\"the output must show id that is automatially generated and unique , name and tag in string\");\r",
+													"console.log(\"the output must match the name and tag that is passed by the user\")\r",
+													"console.log(\"response code should be 200 for positive case\");\r",
+													"console.log(\"output should be an object in json format\");\r",
+													"console.log(`the response should be like this - \r",
+													"{\r",
+													"  \"id\": \"<long>\",\r",
+													"  \"name\": \"<string>\",\r",
+													"  \"tag\": \"<string>\"\r",
+													"}\r",
+													"`)\r",
+													"\r",
+													"\r",
+													"\r",
+													"\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\r\n  \"name\": \"<string>\",\r\n  \"tag\": \"<string>\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/pets",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "post pets",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\r\n  \"name\": \"<string>\",\r\n  \"tag\": \"<string>\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/pets",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"pets"
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "post pet negative",
+							"item": [
+								{
+									"name": "post pet id not unique",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"console.log(\"if the user mention id in the body , it should be unique , if it matches the id that is already present in the record errorshould be thrown\");\r",
+													"console.log(\"the resposne code of the error is 500\");\r",
+													"console.log(\"error must be in json format\");\r",
+													"console.log(\"messge should be given - that id alreay exist or id must be unnique\");\r",
+													"console.log(`\r",
+													" code :<integer>,\r",
+													" message :<string>\r",
+													"`)"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\" : \"<not_unique>\",\r\n  \"name\": \"<string>\",\r\n  \"tag\": \"<string>\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/pets",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "post pet id not unique",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"id\" : \"<not_unique>\",\r\n  \"name\": \"<string>\",\r\n  \"tag\": \"<string>\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/pets",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"pets"
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "post pet name is empty",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"console.log(\"name is required , if not error must be thrown\");\r",
+													"console.log(\"name can be similar from the previos record\")\r",
+													"console.log(\"the resposne code of the error is 500\");\r",
+													"console.log(\"error must be in json format\");\r",
+													"console.log(\"messge should be given - name is required\");\r",
+													"console.log(`\r",
+													" code :<integer>,\r",
+													" message :<string>\r",
+													"`)"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \r\n  \"name\": \"\",\r\n  \"tag\": \"<string>\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/pets",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "post pet name is empty",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n   \r\n  \"name\": \"\",\r\n  \"tag\": \"<string>\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/pets",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"pets"
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "post pet tag empty",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"console.log(\"tag is required - if not eror must be thrown\");\r",
+													"console.log(\"tags can be similar with the previos record\")\r",
+													"console.log(\"error must be in json format\");\r",
+													"console.log(\"response code for error is 500\")\r",
+													"console.log(\"messge should be given - tag cannot be empty\");\r",
+													"console.log(`\r",
+													" code :<integer>,\r",
+													" message :<string>\r",
+													"`)"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \r\n  \"name\": \"<string>\",\r\n  \"tag\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/pets",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"pets"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "post pet tag empty",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \r\n  \"name\": \"<string>\",\r\n  \"tag\": \"\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/pets",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"pets"
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": "{\r\n  \"code\": \"<integer>\",\r\n  \"message\": \"<string>\"\r\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,9 @@
+CREATE TABLE customer_table (
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    products VARCHAR(255),
+    quantities VARCHAR(255),
+    order_discount DECIMAL(10,2),
+    product_discounts VARCHAR(255),
+    shipping_address VARCHAR(255),
+    billing_address VARCHAR(255)
+);

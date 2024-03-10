@@ -1,0 +1,13 @@
+https://restful-booker.herokuapp.com/booking
+paramaters : firstname , lastname , chekin , checkout
+
+firstname : "" , "aa" , "test" ,"long strings" , {invalid name}
+lastname  : "", "aa" , "test" , {invalid name}
+checkin   : {empty},{yy-mm-dd} , {invalid date} 
+checkout  : {empty},{yy-mm-dd} , {invalid date}  
+
+
+
+
+
+outputs : code : 200 for pass

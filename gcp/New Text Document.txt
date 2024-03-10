@@ -1,0 +1,21 @@
+ cd C:\training\bristlecone-training-2024                                                       PS C:\training\bristlecone-training-2024> cd .\gcp\
+PS C:\training\bristlecone-training-2024\gcp> Invoke-WebRequest -Uri "https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe" -OutFile .\GoogleCloudSDKInstaller.exe
+PS C:\training\bristlecone-training-2024\gcp> dir
+
+
+    Directory: C:\training\bristlecone-training-2024\gcp
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        29-02-2024     14:57         267520 GoogleCloudSDKInstaller.exe
+-a----        21-02-2024     15:13              0 readme.txt
+
+
+PS C:\training\bristlecone-training-2024\gcp> & .\GoogleCloudSDKInstaller.exe
+PS C:\training\bristlecone-training-2024\gcp>
+[14:51] Suresh N (Guest)
+https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe"
+[14:54] Suresh N (Guest)
+Invoke-WebRequest -Uri "https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe" -OutFile .\GoogleCloudSDKInstaller.exe
+it will open the setup

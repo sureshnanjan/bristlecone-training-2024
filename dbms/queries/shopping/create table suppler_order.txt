@@ -1,0 +1,7 @@
+CREATE TABLE supplier_order (
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
+    products VARCHAR(255),
+    quantities VARCHAR(255),
+    order_discount DECIMAL(10,2),
+    product_discounts VARCHAR(255)
+);

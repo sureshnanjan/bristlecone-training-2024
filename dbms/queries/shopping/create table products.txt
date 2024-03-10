@@ -1,0 +1,8 @@
+CREATE TABLE product (
+    product_id INT PRIMARY KEY AUTO_INCREMENT,
+    product_category VARCHAR(50),
+    brand VARCHAR(50),
+    colour VARCHAR(50),
+    size VARCHAR(20),
+    supplier VARCHAR(100)
+);
