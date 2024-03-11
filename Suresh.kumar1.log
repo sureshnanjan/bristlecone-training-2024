@@ -1,0 +1,130 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240311142626
+Username: CORPBRISTLECONE\Suresh.Kumar1
+RunAs User: CORPBRISTLECONE\Suresh.Kumar1
+Configuration Name: 
+Machine: BLR-2GTT473 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 27908
+PSVersion: 5.1.22621.2506
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.2506
+BuildVersion: 10.0.22621.2506
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is Suresh.kumar1.log
+PS C:\Users\suresh.kumar1.CORPBRISTLECONE> New-Item -Path C:\workingfolder -Name QA-Training -Selenium
+PS C:\Users\suresh.kumar1.CORPBRISTLECONE> TerminatingError(New-Item): "A parameter cannot be found that matches parameter name 'Selenium'."
+New-Item : A parameter cannot be found that matches parameter name 'Selenium'.
+At line:1 char:51
++ New-Item -Path C:\workingfolder -Name QA-Training -Selenium
++                                                   ~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [New-Item], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.NewItemCommand
+New-Item : A parameter cannot be found that matches parameter name 'Selenium'.
+At line:1 char:51
++ New-Item -Path C:\workingfolder -Name QA-Training -Selenium
++                                                   ~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [New-Item], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\Users\suresh.kumar1.CORPBRISTLECONE> New-Item -Path C:\workingfolder -Name QA-Training-Selenium
+New-Item : Could not find a part of the path 'C:\workingfolder\QA-Training-Selenium'.
+At line:1 char:1
++ New-Item -Path C:\workingfolder -Name QA-Training-Selenium
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\workingfolder\QA-Training-Selenium:String) [New-Item], 
+DirectoryNotFoundException
+    + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewItemCommand
+New-Item : Could not find a part of the path 'C:\workingfolder\QA-Training-Selenium'.
+At line:1 char:1
++ New-Item -Path C:\workingfolder -Name QA-Training-Selenium
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\workingfolder\QA-Training-Selenium:String) [New-Item], DirectoryNotFoundException
+    + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\Users\suresh.kumar1.CORPBRISTLECONE> New-Item -Path C:\workingfolder -Name QA-Training-Selenium -force
+
+
+    Directory: C:\workingfolder
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11-03-2024     02:45              0 QA-Training-Selenium
+
+
+PS C:\Users\suresh.kumar1.CORPBRISTLECONE> New-Item -Path C:\workingfolder -Name QA-Training-Selenium -force -ItemType Directory
+PS C:\Users\suresh.kumar1.CORPBRISTLECONE> dir C:\workingfolder\
+
+
+    Directory: C:\workingfolder
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11-03-2024     02:45              0 QA-Training-Selenium
+
+
+PS C:\Users\suresh.kumar1.CORPBRISTLECONE> sl C:\workingfolder\
+PS C:\workingfolder> New-Item -Name QA-Training-Selenium -force -ItemType Directory
+PS C:\workingfolder> dir
+
+
+    Directory: C:\workingfolder
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11-03-2024     02:45              0 QA-Training-Selenium
+
+
+PS C:\workingfolder> New-Item -Path QA-Training-Selenium -force -ItemType Directory
+PS C:\workingfolder> dir
+
+
+    Directory: C:\workingfolder
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11-03-2024     02:45              0 QA-Training-Selenium
+
+
+PS C:\workingfolder> cd .\QA-Training\
+PS C:\workingfolder\QA-Training> git
+
+PS C:\workingfolder\QA-Training> git clone https://github.com/sureshnanjan/bristlecone-training-2024.git
+
+PS C:\workingfolder\QA-Training> cd .\bristlecone-training-2024\
+PS C:\workingfolder\QA-Training\bristlecone-training-2024> git status
+
+PS C:\workingfolder\QA-Training\bristlecone-training-2024> git checkout -b SureshKumar-branch
+
+PS C:\workingfolder\QA-Training\bristlecone-training-2024> git status
+
+PS C:\workingfolder\QA-Training\bristlecone-training-2024> stop-tr
+stop-tr : The term 'stop-tr' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ stop-tr
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (stop-tr:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+stop-tr : The term 'stop-tr' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ stop-tr
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (stop-tr:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\workingfolder\QA-Training\bristlecone-training-2024> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240311150128
+**********************
