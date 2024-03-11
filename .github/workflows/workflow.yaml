@@ -1,0 +1,16 @@
+name: "Bristlecone API Test"
+run-name: ${{ github.actor }} Postman API Collection run
+on: [workflow_dispatch]
+jobs:
+  bristlecone-api-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run API Tests
+        id: run-newman
+        uses: anthonyvscode/newman-action@v1
+        with:
+          collection: 'api-postman\Postman Echo.postman_collection.json'
+          reporters: cli
+      - name: Output summary to console
+        run: echo ${{ steps.run-newman.outputs.summary }}
