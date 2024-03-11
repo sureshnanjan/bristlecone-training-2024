@@ -1,0 +1,23 @@
+name: "Bristlecone API Test"
+run-name: ${{ github.actor }} Postman API Collection run
+on: [workflow_dispatch]
+jobs:
+  bristlecone-api-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create Artifact Directory
+        run: |
+          mkdir TestArtifacts
+      - name: Install Node Latest Version
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+      - name: Install Newman
+        run: |
+          npm install -g newman newman-reporter-slackreporter newman-reporter-htmlextra
+      - name: Run API Tests
+        run: |
+          newman run 'api-postman/collections/Postman Echo.postman_collection.json' -r cli,htmlextra --reporter-htmlextra-export TestArtifacts/test-results.html
+      - name: Output summary to console
+        run: echo ${{ steps.run-newman.outputs.summary }}

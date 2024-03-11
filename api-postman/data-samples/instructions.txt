@@ -1,0 +1,5 @@
+Refering to the Json file alloted to you write assertions to test
+	- the total no of top level properties
+	- the type of the first top level property
+	- the last toplevel property has some property with value <XXX>
+Help is available at https://devhints.io/chai 
