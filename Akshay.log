@@ -1,0 +1,121 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240311144107
+Username: CORPBRISTLECONE\Akshay.Pagrut
+RunAs User: CORPBRISTLECONE\Akshay.Pagrut
+Configuration Name: 
+Machine: PUN-HL9G7T3 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 20452
+PSVersion: 5.1.19041.4046
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4046
+BuildVersion: 10.0.19041.4046
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is Akshay.log
+PS C:\Users\Akshay.Pagrut> -Path C:\Selenium -Name ‘QA-Training’ 
+-Path : The term '-Path' is not recognized as the name of a cmdlet, function, script file, or operable program. Check 
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ -Path C:\Selenium -Name ‘QA-Training’
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (-Path:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+-Path : The term '-Path' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the
+path is correct and try again.
+At line:1 char:1
++ -Path C:\Selenium -Name ‘QA-Training’
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (-Path:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Akshay.Pagrut> Start-Transcript -Path Akshay.log-Path C:\Selenium -Name ‘QA-Training’ -ItemType Directory 
+>> TerminatingError(Start-Transcript): "A positional parameter cannot be found that accepts argument 'C:\Selenium'."
+Start-Transcript : A positional parameter cannot be found that accepts argument 'C:\Selenium'.
+At line:1 char:1
++ Start-Transcript -Path Akshay.log-Path C:\Selenium -Name ‘QA-Training ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Start-Transcript], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.StartTranscriptCommand
+Start-Transcript : A positional parameter cannot be found that accepts argument 'C:\Selenium'.
+At line:1 char:1
++ Start-Transcript -Path Akshay.log-Path C:\Selenium -Name ‘QA-Training ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Start-Transcript], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.StartTranscriptCommand
+
+PS C:\Users\Akshay.Pagrut> -Path C:\Selenium -Name ‘QA-Training’ -ItemType Directory 
+-Path : The term '-Path' is not recognized as the name of a cmdlet, function, script file, or operable program. Check 
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ -Path C:\Selenium -Name ‘QA-Training’ -ItemType Directory
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (-Path:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+-Path : The term '-Path' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the
+path is correct and try again.
+At line:1 char:1
++ -Path C:\Selenium -Name ‘QA-Training’ -ItemType Directory
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (-Path:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Akshay.Pagrut> -Path C:\Selenium -Name ‘QA-Training’ -ItemType Directory
+-Path : The term '-Path' is not recognized as the name of a cmdlet, function, script file, or operable program. Check 
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ -Path C:\Selenium -Name ‘QA-Training’ -ItemType Directory
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (-Path:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+-Path : The term '-Path' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the
+path is correct and try again.
+At line:1 char:1
++ -Path C:\Selenium -Name ‘QA-Training’ -ItemType Directory
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (-Path:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Akshay.Pagrut> New-Item -Path C:\Selenium -Name ‘QA-Training’ -ItemType Directory
+
+
+    Directory: C:\Selenium
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11-03-2024     14:50                QA-Training
+
+
+PS C:\Users\Akshay.Pagrut> git --version
+git version 2.39.1.windows.1
+PS C:\Users\Akshay.Pagrut> git clone https://github.com/sureshnanjan/bristlecone-training-2024.git
+Cloning into 'bristlecone-training-2024'...
+remote: Enumerating objects: 509, done.
+remote: Counting objects: 100% (268/268), done.
+remote: Compressing objects: 100% (148/148), done.
+Receiving objects: 100% (509/509), 8.36 MiB | 3.26 MiB/sack-reused 241
+Receiving objects: 100% (509/509), 11.29 MiB | 3.73 MiB/s, done.
+Resolving deltas: 100% (214/214), done.
+PS C:\Users\Akshay.Pagrut> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\Akshay.Pagrut> Set-Location bristlecone-training-2024
+PS C:\Users\Akshay.Pagrut\bristlecone-training-2024> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\Akshay.Pagrut\bristlecone-training-2024> git checkout -b akshay-branch
+Switched to a new branch 'akshay-branch'
+PS C:\Users\Akshay.Pagrut\bristlecone-training-2024> git status
+On branch akshay-branch
+nothing to commit, working tree clean
+PS C:\Users\Akshay.Pagrut\bristlecone-training-2024> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240311145824
+**********************
