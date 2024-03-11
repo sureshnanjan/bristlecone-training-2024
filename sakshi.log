@@ -1,0 +1,42 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240311150253
+Username: CORPBRISTLECONE\sakshi.goel
+RunAs User: CORPBRISTLECONE\sakshi.goel
+Configuration Name: 
+Machine: DEL-JCTRFV3 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 22564
+PSVersion: 5.1.19041.4046
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4046
+BuildVersion: 10.0.19041.4046
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is sakshi.log
+PS C:\SAKSHI\SeleniumTraining> cd .\QA-Training\bristlecone-training-2024\
+PS C:\SAKSHI\SeleniumTraining\QA-Training\bristlecone-training-2024> git status
+On branch sakshi-branch
+nothing to commit, working tree clean
+PS C:\SAKSHI\SeleniumTraining\QA-Training\bristlecone-training-2024> Move-Item C:\SAKSHI\SeleniumTraining\sakshi.log .
+Move-Item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ Move-Item C:\SAKSHI\SeleniumTraining\sakshi.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\SAKSHI\SeleniumTraining\sakshi.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+Move-Item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ Move-Item C:\SAKSHI\SeleniumTraining\sakshi.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\SAKSHI\SeleniumTraining\sakshi.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+
+PS C:\SAKSHI\SeleniumTraining\QA-Training\bristlecone-training-2024> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240311150348
+**********************
