@@ -3,10 +3,10 @@ package org.example;
 import java.util.Arrays;
 
 public class BinarySearcher {
-    public static int searchIntegers(Integer arrayToSearch, Integer keytoSearch){
-        return Arrays.binarySearch(arrayToSearch, keytoSearch);
+//    public static int searchIntegers(Integer arrayToSearch, Integer keytoSearch){
+//        return Arrays.binarySearch(arrayToSearch, keytoSearch);
 
-    }
+   // }
 
     /**
      * Compares this object with the specified object for order.  Returns a
