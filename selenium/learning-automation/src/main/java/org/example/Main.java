@@ -14,7 +14,11 @@ public class Main {
         MyBrowserAutomator tool = new MyBrowserAutomator();
         tool.goToPetStore();
         List<String> nameOfPets = tool.getPetNamesFromLefttMenu();
+        List<String> nameOfPet = tool.getPetNamesFromTopMenu();
         for(String array: nameOfPets){
+            System.out.println(array);
+        }
+        for(String array: nameOfPet){
             System.out.println(array);
         }
         System.out.println("Launched Browser");

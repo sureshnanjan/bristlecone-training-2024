@@ -37,7 +37,16 @@ public class MyBrowserAutomator {
 
     public List<String> getPetNamesFromTopMenu(){
         // Implement the missing code to get Items from Top Menu
-        return new ArrayList<String>();
+        By myref = new By.ByXPath(
+                "//*[@id=\"QuickLinks\"]/a");
+        List<WebElement> items = this.myBrowser.findElements(myref);
+        List<String> names = new ArrayList<String>();
+        for (WebElement elem: items) {
+            names.add(elem.getAttribute("href"));
+            //String src = items.getAttribute("src");
+        }
+        return names;
+        //return new ArrayList<String>();
     }
 
 
