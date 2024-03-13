@@ -4,6 +4,7 @@ import  org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
 import java.util.*;
 
 public class MyBrowserAutomator {
@@ -14,26 +15,33 @@ public class MyBrowserAutomator {
 
     private WebDriver myBrowser;
     private String myPetstoreAddress;
-    public MyBrowserAutomator(){
+
+    public MyBrowserAutomator() {
         this.myPetstoreAddress = "https://petstore.octoperf.com/actions/Catalog.action";
         this.myBrowser = new ChromeDriver();
     }
 
-    public void goToPetStore(){
+    public void goToPetStore() {
         this.myBrowser.get(this.myPetstoreAddress);
 
     }
 
-    public List<String> getPetNamesFromLefttMenu(){
-        By myref = new By.ByXPath("//*[@id=\"SidebarContent\"]/a/img");
+    public List<String> getPetNamesFromLefttMenu() {
+        By myref = new By.ByXPath("//*[@id=\"QuickLinks\"]/a");
         List<WebElement> items = this.myBrowser.findElements(myref);
         List<String> names = new ArrayList<String>();
-        for (WebElement elem: items) {
-            names.add(elem.getAttribute("src"));
+
+        for (WebElement elem : items) {
+            //names.add(elem.getAttribute("href"));
+            String href = elem.getAttribute("href");
+            String last = href.substring(href.lastIndexOf("=") + 1);
+            System.out.println(last);
             //String src = items.getAttribute("src");
         }
         return names;
     }
+
+
 
     public List<String> getPetNamesFromTopMenu(){
         // Implement the missing code to get Items from Top Menu
