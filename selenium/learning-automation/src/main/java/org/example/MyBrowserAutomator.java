@@ -25,12 +25,13 @@ public class MyBrowserAutomator {
     }
 
     public List<String> getPetNamesFromLefttMenu(){
-        By myref = new By.ByXPath("//*[@id=\"SidebarContent\"]/a/img");
+        By myref = new By.ByXPath("//*[@id=\"SidebarContent\"]/a");
         List<WebElement> items = this.myBrowser.findElements(myref);
         List<String> names = new ArrayList<String>();
         for (WebElement elem: items) {
-            names.add(elem.getAttribute("src"));
-            //String src = items.getAttribute("src");
+            String src = elem.getAttribute("href");
+            String petName = src.substring(src.indexOf("Id=")+3, src.length());
+            names.add(petName);
         }
         return names;
     }
