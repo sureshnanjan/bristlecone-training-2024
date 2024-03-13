@@ -3,7 +3,12 @@ import org.openqa.selenium.By;
 import  org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
 import java.util.*;
 
 public class MyBrowserAutomator {
@@ -14,9 +19,10 @@ public class MyBrowserAutomator {
 
     private WebDriver myBrowser;
     private String myPetstoreAddress;
-    public MyBrowserAutomator(){
+    public MyBrowserAutomator() throws MalformedURLException {
         this.myPetstoreAddress = "https://petstore.octoperf.com/actions/Catalog.action";
-        this.myBrowser = new ChromeDriver();
+        this.myBrowser = new RemoteWebDriver(new URL("http://localhost:8080"), new ChromeOptions());
+        //this.myBrowser = new ChromeDriver();
     }
 
     public void goToPetStore(){

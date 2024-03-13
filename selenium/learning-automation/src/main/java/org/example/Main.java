@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.Arrays;
 import java.util.List;
+import utils.MyFileUtil;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -10,14 +11,21 @@ public class Main {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
        // Oldcode();
+        MyBrowserAutomator tool = null;
+        try {
+            tool = new MyBrowserAutomator();
+        }catch (Exception ex){
 
-        MyBrowserAutomator tool = new MyBrowserAutomator();
+            System.out.println("Critical Error " + ex.getMessage());
+        }
+
+        System.out.println("Launched Browser");
         tool.goToPetStore();
         List<String> nameOfPets = tool.getPetNamesFromLefttMenu();
         for(String array: nameOfPets){
             System.out.println(array);
         }
-        System.out.println("Launched Browser");
+
         // Make the call and print the items similar as above
         // List<String> nameOfPetsTop =
 
