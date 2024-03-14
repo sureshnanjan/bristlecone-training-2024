@@ -1,5 +1,6 @@
 package org.example;
 
+import java.net.MalformedURLException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,7 +12,12 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
        // Oldcode();
 
-        MyBrowserAutomator tool = new MyBrowserAutomator();
+        MyBrowserAutomator tool = null;
+        try {
+            tool = new MyBrowserAutomator();
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
         tool.goToPetStore();
         List<String> nameOfPets = tool.getPetNamesFromLefttMenu();
         for(String array: nameOfPets){
