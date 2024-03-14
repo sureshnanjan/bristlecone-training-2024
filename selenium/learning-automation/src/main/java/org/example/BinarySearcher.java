@@ -8,6 +8,8 @@ public class BinarySearcher {
 
    // }
 
+
+
     /**
      * Compares this object with the specified object for order.  Returns a
      * negative integer, zero, or a positive integer as this object is less
@@ -47,5 +49,6 @@ public class BinarySearcher {
      * @throws ClassCastException   if the specified object's type prevents it
      *                              from being compared to this object.
      */
+
 
 }

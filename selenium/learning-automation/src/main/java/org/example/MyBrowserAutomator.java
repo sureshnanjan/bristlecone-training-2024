@@ -17,8 +17,8 @@ public class MyBrowserAutomator {
     // I should be able to view all the available pets on Home Page
     // I should be able to make sure all 5 Pet categories are available
 
-    private WebDriver myBrowser;
-    private String myPetstoreAddress;
+    private final WebDriver myBrowser;
+    private final String myPetstoreAddress;
     public MyBrowserAutomator() throws MalformedURLException {
         this.myPetstoreAddress = "https://petstore.octoperf.com/actions/Catalog.action";
         this.myBrowser = new RemoteWebDriver(new URL("http://localhost:8080"), new ChromeOptions());
