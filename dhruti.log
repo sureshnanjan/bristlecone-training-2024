@@ -1,0 +1,68 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240221152732
+Username: CORPBRISTLECONE\DhrutiAnil.Vachhani
+RunAs User: CORPBRISTLECONE\DhrutiAnil.Vachhani
+Configuration Name: 
+Machine: BLR-50YRXD3 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 13744
+PSVersion: 5.1.19041.4046
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4046
+BuildVersion: 10.0.19041.4046
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is dhruti.log
+PS C:\dh> https://github.com/sureshnanjan/bristlecone-training-2024.git
+https://github.com/sureshnanjan/bristlecone-training-2024.git : The term 
+'https://github.com/sureshnanjan/bristlecone-training-2024.git' is not recognized as the name of a cmdlet, function, 
+script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is 
+correct and try again.
+At line:1 char:1
++ https://github.com/sureshnanjan/bristlecone-training-2024.git
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (https://github....aining-2024.git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+https://github.com/sureshnanjan/bristlecone-training-2024.git :
+The term
+'https://github.com/sureshnanjan/bristlecone-training-2024.git'
+is not recognized as the name of a cmdlet, function, script
+file, or operable program. Check the spelling of the name, or
+if a path was included, verify that the path is correct and try
+again.
+At line:1 char:1
++ https://github.com/sureshnanjan/bristlecone-training-2024.git
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (https://github..
+   ..aining-2024.git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\dh> git clone https://github.com/sureshnanjan/bristlecone-training-2024.git
+Cloning into 'bristlecone-training-2024'...
+remote: Enumerating objects: 23, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 23 (delta 5), reused 23 (delta 5), pack-reused 0
+Receiving objects:  82% (19/23), 3.11 MiB | 5.78 MiB/s
+Receiving objects: 100% (23/23), 7.40 MiB | 9.68 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+PS C:\dh> git checkout -b dhruti-branch
+fatal: not a git repository (or any of the parent directories): .
+git
+PS C:\dh> git checkout -b suresh-branch
+fatal: not a git repository (or any of the parent directories): .
+git
+PS C:\dh> git checkout -b dhruti-branch
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\dh> cd .\bristlecone-training-2024
+PS C:\dh\bristlecone-training-2024> git checkout -b dhruti-branch
+Switched to a new branch 'dhruti-branch'
+PS C:\dh\bristlecone-training-2024> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240221153734
+**********************
