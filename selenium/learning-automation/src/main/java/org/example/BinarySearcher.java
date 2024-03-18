@@ -3,10 +3,27 @@ package org.example;
 import java.util.Arrays;
 
 public class BinarySearcher {
+
+    void someMethod(){
+        A aobj = new A();
+        B another = new B();
+        SomeWorker aworker = new SomeWorker();
+        brother mybro = aworker;
+
+        // another.
+        // Worker - Human Being
+        // Parent
+        // Son
+        // Brother
+        // Husband
+
+    }
 //    public static int searchIntegers(Integer arrayToSearch, Integer keytoSearch){
 //        return Arrays.binarySearch(arrayToSearch, keytoSearch);
 
    // }
+
+
 
 
 
@@ -51,4 +68,33 @@ public class BinarySearcher {
      */
 
 
+}
+
+class A{
+    int prop1;
+    String prop2;
+}
+class c {}
+class B extends A{}
+
+interface  parent{
+    void parent_behavior();
+}
+interface brother{
+    void brother_behavior();
+}
+interface husband{
+    void spouse_behavior();
+}
+
+class SomeWorker implements brother,husband{
+    @Override
+    public void brother_behavior() {
+
+    }
+
+    @Override
+    public void spouse_behavior() {
+
+    }
 }

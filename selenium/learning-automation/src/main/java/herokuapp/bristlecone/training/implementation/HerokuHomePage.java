@@ -9,11 +9,9 @@ public class HerokuHomePage implements HomePageOperations {
     private final WebDriver _browser;
     private final By headingLocator;
     private final By subheadingLocator;
-
+    //int myage = "suresh";
     private final By exampleLocator;
-
     private final String url = "https://the-internet.herokuapp.com/";
-
     public HerokuHomePage() {
         this._browser = new ChromeDriver();
         this.headingLocator = By.tagName("h1");
@@ -46,8 +44,18 @@ public class HerokuHomePage implements HomePageOperations {
      * @return - The title of the newly navigated page
      */
     @Override
-    public String goToExample(String exName) {
-        return null;
+    public Object goToExample(String exName) {
+        this._browser.findElement(By.linkText(exName)).click();
+        switch (exName){
+            case "A/B Testing":
+                return new ABTestingPage(this._browser);
+            case "Add/Remove":
+                //return new ADDRemovePage();
+            case "Context Menu":
+                return new ContextMenuPage(this._browser);
+            default:
+                return  null;
+        }
     }
 
     @Override
