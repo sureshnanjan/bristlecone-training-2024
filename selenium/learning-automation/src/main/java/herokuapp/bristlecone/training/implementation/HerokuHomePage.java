@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class HerokuHomePage implements HomePageOperations {
     private final WebDriver _browser;
     private final By headingLocator;
@@ -53,6 +55,8 @@ public class HerokuHomePage implements HomePageOperations {
                 //return new ADDRemovePage();
             case "Context Menu":
                 return new ContextMenuPage(this._browser);
+            case "Geolocation":
+                return new GeoLocationPage(this._browser);
             default:
                 return  null;
         }
@@ -61,6 +65,7 @@ public class HerokuHomePage implements HomePageOperations {
     @Override
     public String getLinkStatusforExample(String whichExample) {
         return null;
+
     }
 
     @Override

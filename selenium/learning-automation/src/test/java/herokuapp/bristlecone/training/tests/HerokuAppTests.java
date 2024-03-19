@@ -3,6 +3,7 @@ package herokuapp.bristlecone.training.tests;
 import herokuapp.bristlecone.training.implementation.HerokuHomePage;
 import herokuapp.bristlecone.training.operations.ABTestingOperations;
 import herokuapp.bristlecone.training.operations.ContextMenuOperations;
+import herokuapp.bristlecone.training.operations.GeolocationOperations;
 import herokuapp.bristlecone.training.operations.HomePageOperations;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -133,6 +134,29 @@ public class HerokuAppTests {
         String actual = cops.getDialogTitle();
         assertEquals(expected,actual);
 
+
+    }
+
+    @Test
+    public void CheckLocationDetailsAreCorrectforCoonoor(){
+        // coonoor - 11.3639424 lat
+        // long = 76.7819776 long
+        GeolocationOperations goppscalculator = (GeolocationOperations) ops.goToExample("Geolocation");
+        String expextedLat = "13.0412658";
+        String expectedLon = "80.2338514";
+        // Act
+        goppscalculator.askWhereAmIn();
+        // Assert
+        String actualLat = goppscalculator.getLatitude();
+        String actualLon = goppscalculator.getLongitude();
+        assertEquals(expectedLon,actualLon);
+        assertEquals(expextedLat, actualLat);
+    }
+
+    @Test
+    public void CheckLocationDetailsAreCorrectforBlr(){
+        // bangalore - 12.9424 lat
+        // long = 77.70 long
 
     }
 
